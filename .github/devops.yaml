@@ -10,4 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Code Successfully run"
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Show Branch
+        run: |
+          echo "GitHub Actions is running!"
+          echo "Branch: ${{ github.ref_name }}"
+
+      - name: List Project Files
+        run: |
+          echo "Project files:"
+          ls -la
+
+      - name: Run Success Test
+        run: |
+          echo "Code Successfully run"
+          echo "DevOps Pipeline completed successfully!"
