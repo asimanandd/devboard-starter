@@ -2,6 +2,8 @@ name: Devops Pipeline
 
 on:
     push:
+        branches:
+                -main
 
 
 jobs:
