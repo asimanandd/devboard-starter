@@ -1,16 +1,13 @@
 name: Devops Pipeline
 
 on:
-    push:
-        branches:
-                -main
-
+  push:
+    branches:
+      - main
 
 jobs:
-    code:
-        runs-on: ubuntu-latest
-        steps:
-              run: echo "Code Successfully run"
-    #build:
-    #test:
-    #deploy:
+  code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Code Successfully run"
